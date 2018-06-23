@@ -21,10 +21,16 @@ public class ConvertingComparatorAsLambda {
 //            }
 //        });
 
-// Step 2 above toLambda
-        Collections.sort(names, (String a, String b) -> {
-            return b.compareTo(a);
-        });
+// Step 2 above to Lambda
+//        Collections.sort(names, (String a, String b) -> {
+//            return b.compareTo(a);
+//        });
+
+        //For one line method bodies you can skip both the braces {} and the return keyword.
+
+//Step 3 above to Lamda
+        Collections.sort(names, (a, b) -> b.compareTo(a));
+        System.out.println("end");
 
 
     }
