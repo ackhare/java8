@@ -37,7 +37,7 @@ public class OptionalDemo {
 
         /*
       ifPresent(Consumer) ---->  If a value is present, invoke the specified consumer
-      with the value,otherwise do nothing.
+      with the value(return that value),otherwise do nothing.
          */
         System.out.println(checkNull1.get());    // printing value by using get method
         /*
