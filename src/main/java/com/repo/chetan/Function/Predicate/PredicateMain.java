@@ -8,13 +8,15 @@ import java.util.function.Predicate;
  */
 /*
 Predicates are boolean-valued functions of one argument.
+
 The interface contains various default methods for composing
  predicates to complex logical terms (and, or, negate)
  */
 public class PredicateMain {
     /*
-    Methods inpredicate
-    test(returns boolean)
+    Methods in predicate(FUNCTIONAL INTERFASE)
+
+    test(returns boolean) //oNLY ABSTRACT METHOD IN pREDICATE FUNCTIONAL INTERFACE
     or (returns Predicate)
     isEqual(returns Predicate)
     negate(returns Predicate)
@@ -25,12 +27,13 @@ public class PredicateMain {
     public static void main(String[] args) {
 // boolean-valued functions of one argument.contains various
 // default methods for composing predicates to complex logical terms (and, or, negate)
-        Predicate<String> predicate = (s) -> s.length() > 0;
+        Predicate<String> predicate = (s) -> s.length() > 0;//BODY OF TEST METHOD
 //The generic String is what it will take on RHS
         predicate.test("foo");              // true
         predicate.negate().test("foo");     // false
-        String str = "testString";
-        boolean b = Objects.nonNull(str);
+
+//Only test returns boolean else return another predicate so test will be the terminal
+
         Predicate<Boolean> nonNull = Objects::nonNull;
 //System.out.println(nonNull.test(true));
 //System.out.println(nonNull.negate().test(false));
